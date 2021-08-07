@@ -1,14 +1,17 @@
 <template>
-  <Demo></Demo>
+<!--  <Demo></Demo>-->
+  <Dashboard></Dashboard>
 </template>
 
 <script>
-import Demo from './components/Demo.vue'
+// import Demo from './components/Demo.vue'
+import Dashboard from './components/Dashboard.vue'
 
 export default {
   name: 'App',
   components: {
-    Demo
+    // Demo,
+    Dashboard
   }
 }
 </script>
