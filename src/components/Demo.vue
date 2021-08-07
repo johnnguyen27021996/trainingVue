@@ -4,7 +4,8 @@
 <!--   <input type="text" v-model="taskName">-->
 <!--   <button class="btn-add" @click="onAddTask()">ADD</button>-->
    <button class="btn-add" @click="showAddPopup = true">ADD</button>
-   <Add v-show="showAddPopup" @closeAddTask="showAddPopup = false" @addTask="onAddTask"></Add>
+<!--   <Add v-show="showAddPopup" @closeAddTask="showAddPopup = false" @addTask="onAddTask"></Add>-->
+   <Add2 :open="showAddPopup" @closeAddTask="showAddPopup = false" @addTask="onAddTask"></Add2>
    <select v-model="filter" class="filter">
      <option value="all">Filter All</option>
      <option value="completed">Filter Completed</option>
@@ -25,11 +26,13 @@
 </template>
 
 <script>
-import Add from './Add.vue';
+// import Add from './Add.vue';
+import Add2 from './Add2.vue';
 export default {
   name: "Demo",
   components: {
-    Add
+    // Add,
+    Add2,
   },
   data() {
     return {

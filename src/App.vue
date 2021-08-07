@@ -1,14 +1,17 @@
 <template>
-  <Demo></Demo>
+<!--  <Demo></Demo>-->
+  <Demo2></Demo2>
 </template>
 
 <script>
-import Demo from './components/Demo.vue'
+// import Demo from './components/Demo.vue'
+import Demo2 from './components/Demo2.vue'
 
 export default {
   name: 'App',
   components: {
-    Demo
+    // Demo,
+    Demo2,
   }
 }
 </script>
