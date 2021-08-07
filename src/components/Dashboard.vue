@@ -4,7 +4,6 @@
     <Chart :id="'chartFirst'" :data="dataApi" :labels="'labels'" :value="'value'"></Chart>
     <Chart :id="'chartSecond'" :data="dataApi" :labels="'labels'" :value="'value'"></Chart>
   </div>
-  <button @click="changeData()">Change Data</button>
 </template>
 
 <script>
@@ -25,24 +24,20 @@ export default {
         { labels: 'Purple', value: 9 },
         { labels: 'Orange', value: 4 },
       ]
-    })
+    });
+    setInterval(() => {
+      this.dataApi = [
+        { labels: 'Red', value: 10 },
+        { labels: 'Blue', value: 7 },
+        { labels: 'Yellow', value: 5 },
+      ]
+    }, 5000);
   },
   data() {
     return {
       dataApi: [],
     }
   },
-  methods: {
-    changeData() {
-      setInterval(() => {
-        this.dataApi = [
-          { labels: 'Red', value: 10 },
-          { labels: 'Blue', value: 7 },
-          { labels: 'Yellow', value: 5 },
-        ]
-      }, 5000);
-    }
-  }
 }
 </script>
 
