@@ -26,10 +26,17 @@
 
 <script>
 import Add from './Add.vue';
+import { demo } from "../services/demo.services";
+
 export default {
   name: "Demo",
   components: {
     Add
+  },
+  created() {
+    demo().then(data => {
+      console.log(data);
+    })
   },
   data() {
     return {
